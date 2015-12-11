@@ -1,0 +1,9 @@
+require 'bundler/gem_tasks'
+require 'rake/extensiontask'
+
+gemspec = Gem::Specification.load( File.dirname(__FILE__) + '/faster_blank.gemspec' )
+Rake::ExtensionTask.new('faster_blank', gemspec)
+
+Gem::PackageTask.new(gemspec){ |pkg|
+  pkg.need_zip = pkg.need_tar = false
+}

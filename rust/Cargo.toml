@@ -1,0 +1,12 @@
+[package]
+name = "faster_blank"
+version = "0.1.0"
+authors = ["Luca Guidi <me@lucaguidi.com>"]
+
+[lib]
+name = "faster_blank"
+doctest = false
+crate-type = ["staticlib"]
+
+[dependencies]
+libc = "0.1.10"
